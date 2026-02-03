@@ -231,6 +231,7 @@ class VideoProcessorSK:
         self.sname = sname
         self.nframes = nframes
         self.vid = skvideo.io.FFmpegReader(self.fname) if self.fname else None
+        self.FPS = self.vid.inputfps if self.vid else None
         self.svid = skvideo.io.FFmpegWriter(self.sname, outputdict={'-r': str(self.fps())}) if self.sname else None
         infos = skvideo.io.ffprobe(self.fname)['video'] if self.fname else None
         if infos:
