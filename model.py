@@ -1,7 +1,7 @@
 from keras.models import Model
 from keras.layers import Concatenate
 from keras.layers import Activation, Input, Lambda
-from keras.layers.convolutional import Conv2D
+from keras.layers import Conv2D
 from keras.layers.pooling import MaxPooling2D
 from keras.layers.merge import Multiply
 from keras.regularizers import l2
