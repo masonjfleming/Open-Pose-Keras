@@ -1,3 +1,9 @@
+import os
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+os.environ["TF_LITE_DISABLE_JAX"] = "1"
+
+
 import numpy as np
 
 # HARD PATCH for sk-video + NumPy >= 1.24
@@ -23,7 +29,6 @@ import matplotlib
 matplotlib.use('agg')
 import matplotlib.pyplot as plt
 import glob
-import os
 from tqdm import tqdm
 import pandas as pd
 import skvideo
