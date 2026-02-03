@@ -1,12 +1,18 @@
+import numpy as np
+
+# HARD PATCH for sk-video + NumPy >= 1.24
+if not hasattr(np, "float"):
+    np.float = float
+if not hasattr(np, "int"):
+    np.int = int
+if not hasattr(np, "bool"):
+    np.bool = bool
+
+
 import argparse
 import cv2
 import math
 import time
-import numpy as np
-
-# Update np behavior
-np.float = float # Fix sk-video np.float deprecation
-
 import util
 from config_reader_colab import config_reader_colab
 from scipy.ndimage import gaussian_filter  # fixed deprecated import
