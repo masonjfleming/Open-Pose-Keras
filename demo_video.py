@@ -375,8 +375,11 @@ class VideoProcessorSK(VideoProcessor):
         self.vid.close()
 
 
-    
-input_path = '/content/Open-Pose-Keras/sample_videos'
+# Originial Input Path:    
+# input_path = '/content/Open-Pose-Keras/sample_videos'
+
+# New input path:
+input_path = '/content/drive/myDrive/colab_openpose/videos'
 keras_weights_file= '/content/Open-Pose-Keras/model/keras/model.h5'
 copy_to = '/content/drive/My Drive/colab_openpose/output_files/'
 
