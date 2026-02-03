@@ -401,7 +401,7 @@ for ivid,vid in enumerate(videos):
     tic = time.time()
     df = pd.DataFrame()
     print(vid)
-    vidname = os.path.basename(vid)
+    vidname = example_infant.mov
     vname = vidname.split('.')[0]
     
     print('vidname')
