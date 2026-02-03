@@ -3,6 +3,10 @@ import cv2
 import math
 import time
 import numpy as np
+
+# Update np behavior
+np.float = float # Fix sk-video np.float deprecation
+
 import util
 from config_reader_colab import config_reader_colab
 from scipy.ndimage import gaussian_filter  # fixed deprecated import
