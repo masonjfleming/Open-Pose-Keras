@@ -371,7 +371,7 @@ class VideoProcessorSK(VideoProcessor):
         self.svid.writeFrame(frame)
     
     def close(self):
-        self.svid.close()
+        # self.svid.close()
         self.vid.close()
 
 
@@ -441,7 +441,7 @@ for ivid,vid in enumerate(videos):
                 print('error during pose estimation')
 
         # combine into video
-        clip.close()
+        # clip.close()
         df.to_pickle(os.path.join(input_path,vname)+'.pkl')
         toc = time.time()
         print ('processing time is %.5f' % (toc - tic))
